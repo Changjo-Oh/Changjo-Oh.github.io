@@ -29,12 +29,13 @@
         var marker = new kakao.maps.Marker({ position: markerPosition });
         var map = new kakao.maps.Map(mapContainer, mapOption);
         function setCenter(lat, lng) {
+            window.webview.postMessage("Hello end setsenter");
             marker.setMap(null);
             var mp = new kakao.maps.LatLng(lat, lng);
             map.setCenter(mp);
             marker = new kakao.maps.Marker({ position: mp });
             marker.setMap(map);
-            chrome.webview.postMessage("Hello end setsenter");
+            //chrome.webview.postMessage("Hello end setsenter");
         }
 
         // javascript 키: c821031f3e1adeacf2de70797498640b
