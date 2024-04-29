@@ -22,24 +22,18 @@
             };
 
         // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+        //var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        var markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+        var marker = new kakao.maps.Marker({ position: markerPosition });
         var map = new kakao.maps.Map(mapContainer, mapOption);
-
-        //var container = document.getElementById('map'),
-        //    options = {
-        //    center: new kakao.maps.LatLng(33.450701, 126.570667),
-        //    level: 3
-        //};
-
-        //var markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
-        //var marker = new kakao.maps.Marker({ position: markerPosition });
-        //var map = new kakao.maps.Map(container, options);
-        //function setCenter(lat, lng) {
-        //    marker.setMap(null);
-        //    var mp = new kakao.maps.LatLng(lat, lng);
-        //    map.setCenter(mp);
-        //    marker = new kakao.maps.Marker({ position: mp });
-        //    marker.setMap(map);
-        //}
+        function setCenter(lat, lng) {
+            marker.setMap(null);
+            var mp = new kakao.maps.LatLng(lat, lng);
+            map.setCenter(mp);
+            marker = new kakao.maps.Marker({ position: mp });
+            marker.setMap(map);
+        }
 
         // javascript 키: c821031f3e1adeacf2de70797498640b
         // 네이티브앱키 :   ecf47f576379a7a02d7d5c10be53ce00
