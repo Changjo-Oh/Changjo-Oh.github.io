@@ -29,7 +29,7 @@
         var marker = new kakao.maps.Marker({ position: markerPosition });
         var map = new kakao.maps.Map(mapContainer, mapOption);
         function setCenter(lat, lng) {
-            window.chrome.webview.postMessage('Hello setCenter');
+            /*window.chrome.webview.postMessage('Hello setCenter');*/
             marker.setMap(null);
             var mp = new kakao.maps.LatLng(lat, lng);
             map.setCenter(mp);
